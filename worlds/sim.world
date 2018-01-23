@@ -74,6 +74,11 @@ LOITER> mode LAND
         <uri>model://iris_with_standoffs_demo</uri>
       </include>
 
+
+
+
+
+
       <!-- add new camera -->
       <link name='camera'>
         <pose>0 -0.01 0.070 1.57 0 1.57</pose>
@@ -104,6 +109,7 @@ LOITER> mode LAND
             </script>
           </material>
         </visual>
+
         <sensor name="camera" type="camera">
           <pose>0 0 0 -1.57 -1.57 0</pose>
           <camera>
@@ -121,13 +127,26 @@ LOITER> mode LAND
           <update_rate>10</update_rate>
           <visualize>true</visualize>
 
-          <plugin name="irlock" filename="libArduCopterIRLockPlugin.so">
+         <!--  <plugin name="irlock" filename="libArduCopterIRLockPlugin.so">
               <fiducial>irlock_beacon_01</fiducial>
-              <cameraName>iris/camera1</cameraName>
-              <imageTopicName>image_raw</imageTopicName>
-              <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-          </plugin>
+          </plugin> -->
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>rrbot/camera1</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>camera_link</frameName>
+          <hackBaseline>0.07</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+      </plugin>
+
         </sensor>
+
       </link>
 
       <!-- attach camera -->
@@ -145,6 +164,9 @@ LOITER> mode LAND
         </axis>
       </joint>
     </model>
+
+
+
 
     <model name="irlock_beacon_01">
       <pose>1.0 -1.0 0.005 0 0 0</pose>
