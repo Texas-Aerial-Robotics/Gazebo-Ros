@@ -115,8 +115,8 @@ LOITER> mode LAND
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>200</height>
+              <width>640</width>
+              <height>480</height>
             </image>
             <clip>
               <near>0.05</near>
@@ -133,7 +133,7 @@ LOITER> mode LAND
           <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
           <alwaysOn>true</alwaysOn>
           <updateRate>0.0</updateRate>
-          <cameraName>rrbot/camera1</cameraName>
+          <cameraName>webcam</cameraName>
           <imageTopicName>image_raw</imageTopicName>
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
           <frameName>camera_link</frameName>

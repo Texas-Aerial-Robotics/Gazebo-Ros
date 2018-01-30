@@ -182,13 +182,13 @@
           <update_rate>10</update_rate>
           <visualize>true</visualize>
 
-         <!--  <plugin name="irlock" filename="libArduCopterIRLockPlugin.so">
+          <!--  <plugin name="irlock" filename="libArduCopterIRLockPlugin.so">
               <fiducial>irlock_beacon_01</fiducial>
           </plugin> -->
           <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
           <alwaysOn>true</alwaysOn>
           <updateRate>0.0</updateRate>
-          <cameraName>rrbot/camera1</cameraName>
+          <cameraName>webcam</cameraName>
           <imageTopicName>image_raw</imageTopicName>
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
           <frameName>camera_link</frameName>
@@ -219,74 +219,6 @@
         </axis>
       </joint>
     </model>
-
-   <model name="irlock_beacon_01">
-      <pose>1.0 -1.0 0.005 0 0 0</pose>
-      <link name="link">
-         <inertial>
-          <pose>0 0 0 0 0 0</pose>
-          <mass>3.0</mass>
-          <inertia>
-            <ixx>0.019</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.01</iyy>
-            <iyz>0</iyz>
-            <izz>0.01</izz>
-          </inertia>
-        </inertial>
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>1.0 1.0 0.02</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1.0</mu>
-                <mu2>1.0</mu2>
-                <fdir1>1 0 0</fdir1>
-              </ode>
-            </friction>
-            <contact>
-              <ode>
-                <kp>1e+12</kp>
-                <kd>1</kd>
-                <max_vel>10</max_vel>
-                <min_depth>0.003</min_depth>
-              </ode>
-            </contact>
-          </surface>
-        </collision>
-        <visual name="visual2">
-          <geometry>
-            <box>
-              <size>1.0 1.0 0.018</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Green</name>
-            </script>
-          </material>
-        </visual>
-        <visual name="visual">
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.02</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Red</name>
-            </script>
-          </material>
-        </visual>
-      </link>
-    </model>
-
-
 
   </world>
 </sdf>
