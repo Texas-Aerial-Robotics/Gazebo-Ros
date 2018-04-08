@@ -32,7 +32,7 @@
 
 <model name="roomba1">
     <include>
-		<uri>model://roomba1</uri>
+		<uri>model://obstacle</uri>
     </include> 
 
 	<plugin name="roombacircle" filename="libroombacircle.so"/>
@@ -40,7 +40,7 @@
 
 <model name="roomba2">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://obstacle</uri>
 	</include>
 	<plugin name ="roombacircle2" filename="libroombacircle2.so"/>
 </model>
@@ -48,21 +48,21 @@
 
 <model name="roomba3">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://obstacle</uri>
 	</include>
 	<plugin name ="roombacircle3" filename="libroombacircle3.so"/>
 </model>
 
 <model name="roomba4">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://obstacle</uri>
 	</include>
 	<plugin name ="roombacircle4" filename="libroombacircle4.so"/>
 </model>
 
 <model name="t1">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://roomba2</uri>
 	</include>
 	<plugin name ="target1" filename="libtarget1.so"/>
 </model>
@@ -103,28 +103,28 @@
 </model>
 <model name="t7">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://roomba2</uri>
 	</include>
 	<plugin name ="target7" filename="libtarget7.so"/>
 </model>
 
 <model name="t8">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://roomba2</uri>
 	</include>
 	<plugin name ="target8" filename="libtarget8.so"/>
 </model>
 
 <model name="t10">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://roomba2</uri>
 	</include>
 	<plugin name ="target10" filename="libtarget10.so"/>
 </model>
 
 <model name="t9">
 	<include>
-		<uri>model://roomba1</uri>
+		<uri>model://roomba2</uri>
 	</include>
 	<plugin name ="target9" filename="libtarget9.so"/>
 </model>
@@ -133,7 +133,7 @@
       <include>
         <uri>model://iris_with_standoffs_demo</uri>
       </include>
-      <pose>-9.5 -9.5 0 0 0 1.57</pose>
+      <pose>0 0 0 0 0 1.57</pose>
      <!-- add new camera -->
       <link name='camera'>
         <pose>0 -0.01 0.070 1.57 0 1.57</pose>
