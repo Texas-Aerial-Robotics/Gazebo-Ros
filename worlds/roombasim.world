@@ -581,6 +581,65 @@
       </joint>
 
     
+     <!--add lidar-->
+      <link name="hokuyo_link">
+        <!-- <collision name="collision">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <box size="0.1 0.1 0.1"/>
+          </geometry>
+        </collision> -->
+        <visual name="visual">
+          <pose>0 0 0.3 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <link>hokuyo::link</link>
+            </mesh>
+          </geometry>
+        </visual>
+        <inertial>
+          <mass value="0" />
+          <pose>0 0 0 0 0 0</pose>
+          <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+
+        <sensor type="ray" name="laser">
+          <pose>0 0 0.3 0 0 0</pose>
+          <visualize>true</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1024</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.141593</min_angle>
+                <max_angle>3.141593</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>30</max>
+              <resolution>0.1</resolution>
+            </range>
+            <!-- <noise>
+              <type>Gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.01</stddev>
+            </noise> -->
+          </ray>
+          <plugin name="hokuyo_node" filename="libgazebo_ros_laser.so">
+            <robotNamespace></robotNamespace>
+            <topicName>/spur/laser/scan</topicName>
+            <frameName>/hokuyo_sensor_link</frameName>
+          </plugin>
+        </sensor>
+      </link>
+
+      <joint name="hokuyo_joint" type="fixed">
+        <pose>0 0 0 0 0 0</pose>
+        <parent>iris::iris_demo::iris::base_link</parent>
+        <child>hokuyo_link</child>
+      </joint>
 
 
 
