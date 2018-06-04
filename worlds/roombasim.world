@@ -32,101 +32,101 @@
 
 <model name="roomba1">
     <include>
-		<uri>model://obstacle</uri>
+    <uri>model://obstacle</uri>
     </include> 
 
-	<plugin name="roombacircle" filename="libroombacircle.so"/>
+  <plugin name="roombacircle" filename="libroombacircle.so"/>
 </model>
 
 <model name="roomba2">
-	<include>
-		<uri>model://obstacle</uri>
-	</include>
-	<plugin name ="roombacircle2" filename="libroombacircle2.so"/>
+  <include>
+    <uri>model://obstacle</uri>
+  </include>
+  <plugin name ="roombacircle2" filename="libroombacircle2.so"/>
 </model>
 
 
 <model name="roomba3">
-	<include>
-		<uri>model://obstacle</uri>
-	</include>
-	<plugin name ="roombacircle3" filename="libroombacircle3.so"/>
+  <include>
+    <uri>model://obstacle</uri>
+  </include>
+  <plugin name ="roombacircle3" filename="libroombacircle3.so"/>
 </model>
 
 <model name="roomba4">
-	<include>
-		<uri>model://obstacle</uri>
-	</include>
-	<plugin name ="roombacircle4" filename="libroombacircle4.so"/>
+  <include>
+    <uri>model://obstacle</uri>
+  </include>
+  <plugin name ="roombacircle4" filename="libroombacircle4.so"/>
 </model>
 
 <model name="t1">
-	<include>
-		<uri>model://roomba2</uri>
-	</include>
-	<plugin name ="target1" filename="libtarget1.so"/>
+  <include>
+    <uri>model://roomba2</uri>
+  </include>
+  <plugin name ="target1" filename="libtarget1.so"/>
 </model>
 
 <model name="t2">
-	<include>
-		<uri>model://roomba1</uri>
-	</include>
-	<plugin name ="target2" filename="libtarget2.so"/>
+  <include>
+    <uri>model://roomba1</uri>
+  </include>
+  <plugin name ="target2" filename="libtarget2.so"/>
 </model>
 
 
 <model name="t3">
-	<include>
-		<uri>model://roomba1</uri>
-	</include>
-	<plugin name ="target3" filename="libtarget3.so"/>
+  <include>
+    <uri>model://roomba1</uri>
+  </include>
+  <plugin name ="target3" filename="libtarget3.so"/>
 </model>
 
 <model name="t4">
-	<include>
-		<uri>model://roomba1</uri>
-	</include>
-	<plugin name ="target4" filename="libtarget4.so"/>
+  <include>
+    <uri>model://roomba1</uri>
+  </include>
+  <plugin name ="target4" filename="libtarget4.so"/>
 </model>
 <model name="t5">
-	<include>
-		<uri>model://roomba1</uri>
-	</include>
-	<plugin name ="target5" filename="libtarget5.so"/>
+  <include>
+    <uri>model://roomba1</uri>
+  </include>
+  <plugin name ="target5" filename="libtarget5.so"/>
 </model>
 
 <model name="t6">
-	<include>
-		<uri>model://roomba1</uri>
-	</include>
-	<plugin name ="target6" filename="libtarget6.so"/>
+  <include>
+    <uri>model://roomba1</uri>
+  </include>
+  <plugin name ="target6" filename="libtarget6.so"/>
 </model>
 <model name="t7">
-	<include>
-		<uri>model://roomba2</uri>
-	</include>
-	<plugin name ="target7" filename="libtarget7.so"/>
+  <include>
+    <uri>model://roomba2</uri>
+  </include>
+  <plugin name ="target7" filename="libtarget7.so"/>
 </model>
 
 <model name="t8">
-	<include>
-		<uri>model://roomba2</uri>
-	</include>
-	<plugin name ="target8" filename="libtarget8.so"/>
+  <include>
+    <uri>model://roomba2</uri>
+  </include>
+  <plugin name ="target8" filename="libtarget8.so"/>
 </model>
 
 <model name="t10">
-	<include>
-		<uri>model://roomba2</uri>
-	</include>
-	<plugin name ="target10" filename="libtarget10.so"/>
+  <include>
+    <uri>model://roomba2</uri>
+  </include>
+  <plugin name ="target10" filename="libtarget10.so"/>
 </model>
 
 <model name="t9">
-	<include>
-		<uri>model://roomba2</uri>
-	</include>
-	<plugin name ="target9" filename="libtarget9.so"/>
+  <include>
+    <uri>model://roomba2</uri>
+  </include>
+  <plugin name ="target9" filename="libtarget9.so"/>
 </model>
 
     <model name="iris">
@@ -173,7 +173,7 @@
         </visual>
 
         <sensor name="camera5" type="camera">
-          <pose>-.15 0 0 0 -2.705 0</pose>
+          <pose>-.15 0 0 0 -2.79253 0</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -212,7 +212,7 @@
       </link>
 
       <!-- attach camera -->
-      <joint type="revolute" name="base_camera_joint5">
+      <joint type="fixed" name="base_camera_joint5">
         <pose>0 0 0.0 0 0 0</pose>
         <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
         <child>camera5</child>
@@ -263,7 +263,7 @@
         </visual>
 
         <sensor name="camera4" type="camera">
-          <pose>.15 0 0 3.14 -.436 0</pose>
+          <pose>.15 0 0 3.14 -0.349066 0</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -302,7 +302,7 @@
       </link>
 
       <!-- attach camera -->
-      <joint type="revolute" name="base_camera_joint4">
+      <joint type="fixed" name="base_camera_joint4">
         <pose>0 0 0.0 0 0 0</pose>
         <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
         <child>camera4</child>
@@ -351,7 +351,7 @@
         </visual>
 
         <sensor name="camera3" type="camera">
-          <pose>0 -.15 0 0 -2.705 1.57</pose>
+          <pose>0 -.15 0 0 -2.79253 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -390,7 +390,7 @@
       </link>
 
       <!-- attach camera -->
-      <joint type="revolute" name="base_camera_joint3">
+      <joint type="fixed" name="base_camera_joint3">
         <pose>0 0 0.0 0 0 0</pose>
         <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
         <child>camera3</child>
@@ -439,7 +439,7 @@
         </visual>
 
         <sensor name="camera2" type="camera">
-          <pose>0 .15 0 3.14 -.436 1.57</pose>
+          <pose>0 .15 0 3.14 -0.349066 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -478,7 +478,7 @@
       </link>
 
       <!-- attach camera -->
-      <joint type="revolute" name="base_camera_joint2">
+      <joint type="fixed" name="base_camera_joint2">
         <pose>0 0 0.0 0 0 0</pose>
         <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
         <child>camera2</child>
@@ -528,7 +528,7 @@
         <sensor name="camera" type="camera">
           <pose>0 0 0 -1.57 -1.57 0</pose>
           <camera>
-            <horizontal_fov>1.0472</horizontal_fov>
+            <horizontal_fov>0.750492</horizontal_fov>
             <image>
               <width>640</width>
               <height>480</height>
@@ -580,7 +580,72 @@
         </axis>
       </joint>
 
-    
+       <!--add lidar-->
+      <link name="hokuyo_link">
+        <!-- <collision name="collision">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <box size="0.1 0.1 0.1"/>
+          </geometry>
+        </collision> -->
+        <visual name="visual">
+          <pose>0 0 0.3 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <link>hokuyo::link</link>
+            </mesh>
+          </geometry>
+        </visual>
+        <inertial>
+          <mass>0.016</mass>
+          <inertia>
+             <ixx>0.0001</ixx>
+             <ixy>0</ixy>
+             <ixz>0</ixz>
+             <iyy>0.0001</iyy>
+             <iyz>0</iyz>
+             <izz>0.0001</izz>
+             <!-- low intertia necessary to avoid to disturb the drone -->
+          </inertia>
+        </inertial>
+
+        <sensor type="ray" name="laser">
+          <pose>0 0 0.3 0 0 0</pose>
+          <visualize>true</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1024</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.141593</min_angle>
+                <max_angle>3.141593</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>30</max>
+              <resolution>0.1</resolution>
+            </range>
+            <!-- <noise>
+              <type>Gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.01</stddev>
+            </noise> -->
+          </ray>
+          <plugin name="hokuyo_node" filename="libgazebo_ros_laser.so">
+            <robotNamespace></robotNamespace>
+            <topicName>/spur/laser/scan</topicName>
+            <frameName>/hokuyo_sensor_link</frameName>
+          </plugin>
+        </sensor>
+      </link>
+
+      <joint name="hokuyo_joint" type="fixed">
+        <pose>0 0 0 0 0 0</pose>
+        <parent>iris::iris_demo::iris::base_link</parent>
+        <child>hokuyo_link</child>
+      </joint>    
 
 
 
