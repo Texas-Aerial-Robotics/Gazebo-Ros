@@ -141,9 +141,9 @@
 
 
 
-        <!-- add new camera -->
+      <!-- add new camera -->
       <link name='camera5'>
-        <pose>0 -0.01 0.070 1.57 0 1.57</pose>
+       <pose>0 0 0 0 0 -1.57</pose> 
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -157,7 +157,7 @@
           </inertia>
         </inertial>
         <visual name='visual5'>
-          <pose>0 .15 0 0 -.785 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <geometry>
             <cylinder>
               <radius>0.025</radius>
@@ -173,7 +173,7 @@
         </visual>
 
         <sensor name="camera5" type="camera">
-          <pose>-.15 0 0 0 -2.79253 0</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -214,7 +214,7 @@
       <!-- attach camera -->
       <joint type="fixed" name="base_camera_joint5">
         <pose>0 0 0.0 0 0 0</pose>
-        <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
+        <parent>iris::iris_demo::iris::base_link</parent>
         <child>camera5</child>
         <axis>
           <limit>
@@ -227,13 +227,9 @@
       </joint>
 
 
-
-
-
-
-        <!-- add new camera -->
+       <!-- add new camera -->
       <link name='camera4'>
-        <pose>0 -0.01 0.070 1.57 0 1.57</pose>
+       <pose>0 0 0 0 0 3.14</pose> 
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -247,7 +243,7 @@
           </inertia>
         </inertial>
         <visual name='visual4'>
-          <pose>0 .15 0 0 -.785 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <geometry>
             <cylinder>
               <radius>0.025</radius>
@@ -263,7 +259,7 @@
         </visual>
 
         <sensor name="camera4" type="camera">
-          <pose>.15 0 0 3.14 -0.349066 0</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -304,7 +300,7 @@
       <!-- attach camera -->
       <joint type="fixed" name="base_camera_joint4">
         <pose>0 0 0.0 0 0 0</pose>
-        <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
+        <parent>iris::iris_demo::iris::base_link</parent>
         <child>camera4</child>
         <axis>
           <limit>
@@ -318,10 +314,9 @@
 
 
 
-
-        <!-- add new camera -->
+       <!-- add new camera -->
       <link name='camera3'>
-        <pose>0 -0.01 0.070 1.57 0 1.57</pose>
+       <pose>0 0 0 0 0 1.57</pose> 
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -335,7 +330,7 @@
           </inertia>
         </inertial>
         <visual name='visual3'>
-          <pose>0 .15 0 0 -.785 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <geometry>
             <cylinder>
               <radius>0.025</radius>
@@ -351,7 +346,7 @@
         </visual>
 
         <sensor name="camera3" type="camera">
-          <pose>0 -.15 0 0 -2.79253 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -392,7 +387,7 @@
       <!-- attach camera -->
       <joint type="fixed" name="base_camera_joint3">
         <pose>0 0 0.0 0 0 0</pose>
-        <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
+        <parent>iris::iris_demo::iris::base_link</parent>
         <child>camera3</child>
         <axis>
           <limit>
@@ -407,9 +402,9 @@
 
 
 
-        <!-- add new camera -->
+       <!-- add new camera -->
       <link name='camera2'>
-        <pose>0 -0.01 0.070 1.57 0 1.57</pose>
+       <!--  <pose>0 0 0.070 0 0 0</pose> -->
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -423,7 +418,7 @@
           </inertia>
         </inertial>
         <visual name='visual2'>
-          <pose>0 .15 0 0 -.785 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <geometry>
             <cylinder>
               <radius>0.025</radius>
@@ -439,7 +434,7 @@
         </visual>
 
         <sensor name="camera2" type="camera">
-          <pose>0 .15 0 3.14 -0.349066 1.57</pose>
+          <pose>0 .15 0.070 0 0.349066 1.57</pose>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -480,7 +475,7 @@
       <!-- attach camera -->
       <joint type="fixed" name="base_camera_joint2">
         <pose>0 0 0.0 0 0 0</pose>
-        <parent>iris::iris_demo::gimbal_small_2d::tilt_link</parent>
+        <parent>iris::iris_demo::iris::base_link</parent>
         <child>camera2</child>
         <axis>
           <limit>
@@ -493,7 +488,7 @@
       </joint>
 
 
-
+       
      <!-- add new camera -->
       <link name='camera'>
         <pose>0 -0.01 0.070 1.57 0 1.57</pose>
@@ -580,6 +575,9 @@
         </axis>
       </joint>
 
+
+
+
        <!--add lidar-->
       <link name="hokuyo_link">
         <!-- <collision name="collision">
@@ -646,7 +644,6 @@
         <parent>iris::iris_demo::iris::base_link</parent>
         <child>hokuyo_link</child>
       </joint>    
-
 
 
 
