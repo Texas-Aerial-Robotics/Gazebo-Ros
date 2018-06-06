@@ -30,7 +30,7 @@
       <uri>model://sun</uri>
     </include>
 
-<model name="roomba1">
+<model name="roomba">
     <include>
     <uri>model://obstacle</uri>
     </include> 
@@ -69,7 +69,7 @@
 
 <model name="t2">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target2" filename="libtarget2.so"/>
 </model>
@@ -77,27 +77,27 @@
 
 <model name="t3">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target3" filename="libtarget3.so"/>
 </model>
 
 <model name="t4">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target4" filename="libtarget4.so"/>
 </model>
 <model name="t5">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target5" filename="libtarget5.so"/>
 </model>
 
 <model name="t6">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target6" filename="libtarget6.so"/>
 </model>
