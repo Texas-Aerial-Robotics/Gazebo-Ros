@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 <sdf version="1.5">
   <world name="default">
     <physics type="ode">
@@ -30,10 +30,10 @@
       <uri>model://sun</uri>
     </include>
 
-<model name="roomba1">
+<model name="roomba">
     <include>
     <uri>model://obstacle</uri>
-    </include> 
+    </include>
 
   <plugin name="roombacircle" filename="libroombacircle.so"/>
 </model>
@@ -69,7 +69,7 @@
 
 <model name="t2">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target2" filename="libtarget2.so"/>
 </model>
@@ -77,27 +77,27 @@
 
 <model name="t3">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target3" filename="libtarget3.so"/>
 </model>
 
 <model name="t4">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target4" filename="libtarget4.so"/>
 </model>
 <model name="t5">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target5" filename="libtarget5.so"/>
 </model>
 
 <model name="t6">
   <include>
-    <uri>model://roomba1</uri>
+    <uri>model://roomba</uri>
   </include>
   <plugin name ="target6" filename="libtarget6.so"/>
 </model>
@@ -143,7 +143,7 @@
 
       <!-- add new camera -->
       <link name='camera5'>
-       <pose>0 0 0 0 0 -1.57</pose> 
+       <pose>0 0 0 0 0 -1.57</pose>
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -229,7 +229,7 @@
 
        <!-- add new camera -->
       <link name='camera4'>
-       <pose>0 0 0 0 0 3.14</pose> 
+       <pose>0 0 0 0 0 3.14</pose>
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -316,7 +316,7 @@
 
        <!-- add new camera -->
       <link name='camera3'>
-       <pose>0 0 0 0 0 1.57</pose> 
+       <pose>0 0 0 0 0 1.57</pose>
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>0.1</mass>
@@ -488,7 +488,7 @@
       </joint>
 
 
-       
+
      <!-- add new camera -->
       <link name='camera'>
         <pose>0 -0.01 0.070 1.57 0 1.57</pose>
@@ -580,20 +580,21 @@
 
        <!--add lidar-->
       <link name="hokuyo_link">
+        <pose>0 0 0 0 0 0</pose>
         <!-- <collision name="collision">
           <pose>0 0 0.5 0 0 0</pose>
           <geometry>
             <box size="0.1 0.1 0.1"/>
           </geometry>
         </collision> -->
-        <visual name="visual">
+        <!-- <visual name="visual">
           <pose>0 0 0.3 0 0 0</pose>
           <geometry>
             <mesh>
-              <link>hokuyo::link</link>
+              <uri>model://hokuyo</uri>
             </mesh>
           </geometry>
-        </visual>
+        </visual> -->
         <inertial>
           <mass>0.016</mass>
           <inertia>
@@ -608,7 +609,7 @@
         </inertial>
 
         <sensor type="ray" name="laser">
-          <pose>0 0 0.3 0 0 0</pose>
+          <pose>0 0 0.3 0 0 1.57</pose>
           <visualize>true</visualize>
           <update_rate>10</update_rate>
           <ray>
@@ -643,12 +644,12 @@
         <pose>0 0 0 0 0 0</pose>
         <parent>iris::iris_demo::iris::base_link</parent>
         <child>hokuyo_link</child>
-      </joint>    
+      </joint>
 
 
 
 
-     
+
 
     </model>
 
