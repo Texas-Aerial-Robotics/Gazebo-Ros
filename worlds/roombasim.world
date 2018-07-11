@@ -133,7 +133,7 @@
       <include>
         <uri>model://iris_with_standoffs_demo</uri>
       </include>
-      <pose>0 0 0 0 0 1.57</pose>
+      <pose>-9.5 -9.5 0 0 0 1.57</pose>
 
 
 
